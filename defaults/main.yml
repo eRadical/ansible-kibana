@@ -1,0 +1,12 @@
+---
+
+e_kibana_major_version: "6.x"
+e_kibana_version: "6.3.1"
+
+e_kibana_oss: true # @todo implement distinction between oss and non-oss versions
+e_kibana_version_lock: true # @todo implement version locking, for now it's hardcoded
+
+e_kibana_server_port: 5601
+e_kibana_server_host: "0.0.0.0"
+
+e_kibana_elasticsearch_url: "http://localhost:9200"

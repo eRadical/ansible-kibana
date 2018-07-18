@@ -1,0 +1,16 @@
+---
+- name: Ensure required packages are installed
+  apt:
+    name: apt-transport-https
+    state: present
+
+- name: Add Elasticsearch apt key
+  apt_key:
+    url: "{{ e_kibana_gpg_key }}"
+    state: present
+
+- name: Add Kibana repo
+  apt_repository:
+    repo: "{{ e_kibana_apt_url }}"
+    state: present
+    update_cache: yes

@@ -1,0 +1,8 @@
+[kibana-{{ e_kibana_major_version }}]
+name=Kibana repository for {{ e_kibana_major_version }} packages
+baseurl=https://artifacts.elastic.co/packages/{{ e_kibana_major_version }}/yum
+gpgcheck=1
+gpgkey={{ e_kibana_gpg_key }}
+enabled=1
+autorefresh=1
+type=rpm-md

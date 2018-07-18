@@ -1,0 +1,19 @@
+---
+sudo: required
+language: bash
+
+env:
+  - distro: centos7
+  - distro: centos6
+  - distro: ubuntu1604
+
+install:
+  - sudo pip install -U ansible
+
+script:
+  - pwd
+  - ls -al
+  - ansible-playbook --syntax-check -i tests/inventory test.yml
+
+# notifications:
+#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
