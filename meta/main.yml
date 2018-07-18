@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: kibana
   author: eRadical
   description: Install Kibana for CentOS & Debian
 
@@ -22,7 +23,5 @@ galaxy_info:
     - web
     - system
     - monitoring
-
-  galaxy_tags: []
 
 dependencies: []
