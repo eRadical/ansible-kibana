@@ -15,5 +15,5 @@ script:
   - ls -al
   - ansible-playbook --syntax-check -i tests/inventory test.yml
 
-# notifications:
-#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
