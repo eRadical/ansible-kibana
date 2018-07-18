@@ -1,18 +1,18 @@
 # Kibana is served by a back end server. This controls which port to use.
-server.port: {{ kibana_server_port }}
+server.port: {{ e_kibana_server_port }}
 
 # The host to bind the server to.
-server.host: {{ kibana_server_host }}
+server.host: {{ e_kibana_server_host }}
 
 # If you are running kibana behind a proxy, and want to mount it at a path,
 # specify that path here. The basePath can't end in a slash.
-# server.basePath: ""
+# server.basePath: "{{ e_kibana_server_basepath }}"
 
 # The maximum payload size in bytes on incoming server requests.
 # server.maxPayloadBytes: 1048576
 
 # The Elasticsearch instance to use for all your queries.
-elasticsearch.url: {{ kibana_elasticsearch_url }}
+elasticsearch.url: {{ e_kibana_elasticsearch_url }}
 
 # preserve_elasticsearch_host true will send the hostname specified in `elasticsearch`. If you set it to false,
 # then the host you use to connect to *this* Kibana instance will be sent.
