@@ -1,12 +1,20 @@
 ---
 
 - include_tasks: install-{{ ansible_os_family }}.yml
-  when: ansible_os_family == "Debian" or ansible_os_family == "RedHat"
+  when: (ansible_os_family == "Debian" or ansible_os_family == "RedHat") and
+    e_kibana_no_repo_if_role not in role_names
 
 - name: Install Kibana version {{ e_kibana_version }}
   package:
-    name: kibana-{{ e_kibana_version }}
+    name: "kibana-{{ e_kibana_version }}"
     state: present
+  when: not e_kibana_oss
+
+- name: Install Kibana version {{ e_kibana_version }}
+  package:
+    name: "kibana-oss-{{ e_kibana_version }}"
+    state: present
+  when: e_kibana_oss
 
 - name: Ensure Kibana is started and enabled at boot.
   service:

@@ -3,3 +3,5 @@
 e_kibana_gpg_key: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
 
 e_kibana_apt_url: "deb https://artifacts.elastic.co/packages/{{ e_kibana_major_version }}/apt stable main"
+
+e_kibana_no_repo_if_role: "elastic.elasticsearch"
